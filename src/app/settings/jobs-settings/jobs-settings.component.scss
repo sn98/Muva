@@ -1,0 +1,33 @@
+h4 {
+  padding-left: 20px;
+  margin-bottom: -5px;
+}
+ion-card{
+  box-shadow: none !important;
+  background-color: #F8F8F8;
+  button{
+    background-color:#56CCDB;
+    color: white;
+    position: absolute;
+    top:33%;
+    right:5%;
+    height: 33%;
+    border-radius: 5px;
+  }
+}
+ion-fab{
+  position: fixed;
+  bottom: 40px;
+  right: 5%;
+
+  button{
+    height: 30px;
+    width: 93px;
+    background-color:#EB5614;
+    color:white;
+    border-radius: 5px;
+    ion-icon {
+      position: absolute;
+    }
+  }
+}

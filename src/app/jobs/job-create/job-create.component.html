@@ -1,0 +1,121 @@
+<ion-toolbar>
+  <ion-title style="display:flex;">
+    <app-info-cp-header></app-info-cp-header>
+    <p id="courId"><b>#00009</b></p>
+    <button class="badge">
+      <ion-select [(ngModel)]="jstatus" interface="popover" placeholder="Unassigned">
+        <ion-select-option  *ngFor="let item of jobs" value="{{ item.status }}">{{item.status}}</ion-select-option>
+      </ion-select>
+    </button>
+    <img class="edit" src="assets/editing-transparent-clipart-files-1.png" >
+  </ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Courier</b></ion-label>
+          <ion-item lines="none" class="in" lines="none" name="courier">
+            <ion-label class="l2">Choose a Courier</ion-label>
+            <ion-select [(ngModel)]="courier" slot="end" interface="popover" >
+              <ion-select-option value="Jon">Jon Doe</ion-select-option>
+              <ion-select-option value="Jane">Jane Noe</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Job Type</b></ion-label>
+          <ion-item lines="none" class="in" lines="none" name="jobtype">
+            <ion-label class="l2">Select Jobtype</ion-label>
+            <ion-select [(ngModel)]="jobtype" slot="end" interface="popover" >
+              <ion-select-option value="type1">Type 1</ion-select-option>
+              <ion-select-option value="type2">Type 2</ion-select-option>
+              <ion-select-option value="type3">Type 3</ion-select-option>
+              <ion-select-option value="type4">Type 4</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Customer</b></ion-label>
+          <ion-input [(ngModel)]="customer" type="text" value="customer" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Phone</b></ion-label>
+          <ion-input type="text" name="phone" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Email</b></ion-label>
+          <ion-input type="text" name="email" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label><b>Pick-Up Address</b></ion-label>
+          <ion-textarea id="pickup" placeholder="Enter more information here..."></ion-textarea>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label><b>Delivery Address</b></ion-label>
+          <ion-textarea id="delivery" placeholder="Enter more information here..."></ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Order</b></ion-label>
+          <ion-textarea id="order" placeholder="Enter more information here..."></ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Delivery Instructions</b></ion-label>
+          <ion-textarea [(ngModel)]="instructions" value="instructions" value="in" placeholder="Enter more information here..."></ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>Payment Method</b></ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-radio-group allow-empty-selections>
+        <ion-row>
+          <ion-col size="5">
+            <ion-item lines="none" class="itempay">
+              <ion-label >Cash</ion-label>
+              <ion-radio class="cash" slot="start" color="dark" value="cash"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col size="7">
+            <ion-item lines="none" class="itempay">
+              <ion-label>Credit/Debit Card</ion-label>
+              <ion-radio class="card" slot="start" color="dark" value="credit"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-radio-group>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label><b>Cost</b></ion-label>
+          <ion-input type="text" name="cost" input-style="box"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label><b>Delivery Cost</b></ion-label>
+          <ion-input type="text" name="deliverycost" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <ion-fab slot="fixed">
+    <button color="#EB5614" (click)="createJob()">
+      SAVE CHANGES &nbsp;
+    </button>
+  </ion-fab>
+</ion-content>

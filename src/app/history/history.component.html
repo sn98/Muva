@@ -1,0 +1,26 @@
+<ion-header style="background-color:whitesmoke">
+  <app-header (filterVar)="searching($event)"></app-header>
+  <ion-toolbar>
+    <ion-segment color="danger" scrollable="true" scrollX="true" style="background-color: #FFFFFF;">
+      <ion-segment-button  *ngFor="let name of segmentTabs"
+        (click)="segmentChosen(name)">
+        <ion-label id="seglabel" > {{ name }} </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<div style="display: flex;">
+  <h4 slot=fixed>Jobs</h4>
+  <button slot="fixed" class="group">
+    <ion-select [(ngModel)]="order" interface="popover" placeholder="Group By">
+      <ion-select-option value="none" >None</ion-select-option>
+      <ion-select-option value="courier" >Courier</ion-select-option>
+      <ion-select-option value="jobtype" >Job Type</ion-select-option>
+    </ion-select>
+  </button>
+</div>
+
+<ion-content overflow-scroll="true">
+  <app-allhistory [searchTerm]="searchTerm" [jobs]="filterjobs(selectedSegment, order)"></app-allhistory>
+</ion-content>

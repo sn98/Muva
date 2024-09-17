@@ -1,0 +1,59 @@
+<ion-content class="background">
+  <div class="center">
+    <ion-img src="assets/muvalogin.png"></ion-img>
+    <br>
+    <p id="invalid" *ngIf="!emailCtrl.valid && emailCtrl.touched">Should be a valis email address</p>
+    <p id="invalid" *ngIf="!passCtrl.valid && passCtrl.touched">Password should be at least 8 characters long</p>
+    <form #login="ngForm" (ngSubmit)="onLogin(login)">
+      <ion-item class="item">
+        <ion-label position="floating">
+          <ion-icon name="briefcase"></ion-icon>
+          &nbsp;&nbsp;Merchant Code
+        </ion-label>
+        <ion-input
+          ngModel
+          name="code">
+        </ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="person"></ion-icon>
+          &nbsp;&nbsp;Email/PhoneNumber
+        </ion-label>
+        <ion-input
+          type="email"
+          ngModel
+          name="email"
+          required
+          email
+          #emailCtrl="ngModel">
+        </ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="lock-closed"></ion-icon>
+          &nbsp;&nbsp;Password
+        </ion-label>
+        <ion-input
+          type="password"
+          ngModel
+          name="password"
+          required
+          minlengthyy="8"
+          #passCtrl="ngModel">
+        </ion-input>
+
+      </ion-item>
+      <p style="
+        color: #56CDDB;
+        text-align: right;
+        font-size: small;"><u>Forgot Password?</u></p><br>
+      <button
+        type="submit"
+        [disabled]="!login.valid">LOG IN</button>
+    </form>
+  </div>
+
+</ion-content>

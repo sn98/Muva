@@ -1,0 +1,62 @@
+div{
+  ion-button{
+    margin:5%;
+    height: 100px;
+    width: 100px;
+  }
+  ion-toggle{
+    transform: scale(0.6);
+  }
+  p{
+    position: absolute;
+    top:2%;
+    right:5%;
+    font-size: x-small;
+    color:grey;
+  }
+  ion-buttons{
+    position: absolute;
+    right:5%;
+    top:5%;
+  }
+}
+
+
+ion-grid {
+  padding-left:5%;
+  padding-right:5%;
+  padding-bottom: 15%;
+}
+ion-col{
+  line-height: 30px;
+}
+ion-input{
+  line-height: 10px;
+  border-radius: 7px;
+  background-color: rgb(240, 240, 240);
+  color:black;
+}
+#address{
+  border-radius: 7px;
+  background-color: rgb(240, 240, 240);
+  color:black;
+}
+
+ion-fab{
+  position: fixed;
+  left:5%;
+  right:5%;
+  bottom: 5%;
+  width: 90%;
+
+  button{
+    height: 40px;
+    width: 100%;
+    background-color:#EB5614;
+    color:white;
+    border-radius: 10px;
+    ion-icon {
+      position: absolute;
+    }
+  }
+}

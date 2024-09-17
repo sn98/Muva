@@ -1,0 +1,73 @@
+<ion-toolbar>
+  <ion-title>
+    <app-info-header></app-info-header>
+    <p id="courId"><b>{{ courierData.id}}</b></p>
+  </ion-title>
+  <ion-buttons>
+    <p style="font-size: small;"><b>{{courierData.id}}</b></p>
+    <ion-toggle mode="ios" slot="start" name="Online" ></ion-toggle>
+    <ion-label>Online</ion-label>
+  </ion-buttons>
+  <div class="bande">
+    <button class="badge" [ngStyle]="{'background-color': getColor(courierData.status)}">{{ courierData.status }}</button>
+    <img class="edit" src="assets/editing-transparent-clipart-files-1.png" (click)="showCourierEdit(courierData.id)">
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="line-height: 10px;">
+      <ion-col size="6">
+        <ion-label><b>Name</b></ion-label><br>
+        {{ courierData.name }}
+      </ion-col>
+      <ion-col size="6">
+        <ion-label><b>Phone</b></ion-label><br>
+        {{ courierData.phoneNumber }} <br>
+        <div class=icons>
+          &nbsp;&nbsp;
+          <div class="icon">
+            <ion-icon name="chatbubble"></ion-icon>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="icon">
+            <ion-icon name="call"></ion-icon>
+          </div>
+        </div>
+        <div class="labels">
+          <ion-label>message</ion-label>
+          &nbsp;&nbsp;&nbsp;
+          <ion-label>mobile</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label><b>Current Job</b></ion-label><br>
+        JobID, JobType, Customer
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label><b>Recent History</b></ion-label>
+        <ion-list >
+          <ion-label class="history">Aug 20/20 11:00AM</ion-label>
+          <p class="histext"><i>JobID, Type, Customer</i></p>
+          <ion-label class="history">Aug 20/20 11:00AM</ion-label>
+          <p class="histext"><i>JobID, Type, Customer</i></p>
+          <ion-label class="history">Aug 20/20 11:00AM</ion-label>
+          <p class="histext"><i>JobID, Type, Customer</i></p>
+          <br>
+          <p class="history"><u>See more</u></p>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label><b>Location</b></ion-label>
+        <ion-img src="assets/jam.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

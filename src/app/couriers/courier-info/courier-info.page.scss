@@ -1,0 +1,91 @@
+//TOOLBAR
+
+#courId{
+  position: absolute;
+  font-size: small;
+  top: 16%;
+  right: 5%;
+}
+
+.bande{
+  display: flex;
+  position: absolute;
+  right:5%;
+  top: 72%;
+}
+.edit{
+  margin-top: -3px;
+  transform: scale(0.9);
+}
+
+.badge {
+  color:white;
+  height: 20px;
+  border-radius: 3px;
+}
+ion-toolbar{
+  ion-title{
+    height:95px;
+  }
+  ion-buttons{
+    position: absolute;
+    top: 60px;
+    left:5%;
+    ion-toggle{
+      transform: scale(0.6);
+    }
+    ion-label{
+      font-size: small;
+    }
+  }
+}
+
+//CONTENT
+
+ion-col{
+  line-height: 30px;
+}
+ion-grid {
+  padding:5%;
+  padding-bottom: 15%;
+}
+ion-input{
+  border-radius: 7px;
+  background-color: rgb(240, 240, 240);
+  color:black;
+}
+ion-list{
+  line-height: 2px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.history{
+  font-size: small;
+  font-weight: bold;
+  color: rgb(150, 150, 150);
+}
+
+.histext{
+  color: rgb(170, 170, 170);
+}
+
+
+.icons{
+  display: flex;
+}
+.icon{
+  display: flex;
+  background-color:#EB5614;
+  color: white;
+  width:25px;
+  height: 25px;
+  padding-top:5px;
+  border-radius: 25px;
+  justify-content:center;
+}
+
+.labels{
+  font-size: x-small;
+  margin-top:-10px;
+}

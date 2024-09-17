@@ -1,0 +1,83 @@
+  <ion-toolbar>
+    <ion-title>
+      <app-info-header></app-info-header>
+      <p id="jobId"><b>Order#:{{ jobData.jobid}}</b></p>
+    </ion-title>
+    <div class="line2">
+      <ion-buttons class="name">
+        <ion-label><b>Courier</b></ion-label>&nbsp;
+        <ion-select interface="popover" [(ngModel)]="jcourier" placeholder="{{jobData.courier}}">
+          <ion-select-option *ngFor="let item of jobs" value="{{ item.courier }}">{{item.courier}}</ion-select-option>
+        </ion-select>
+      </ion-buttons>
+    <button class="badge" [ngStyle]="{'background-color': getColor(jstatus)}">
+      <ion-select [(ngModel)]="jstatus" interface="popover" placeholder="{{jobData.status}}">
+        <ion-select-option *ngFor="let item of statuses" value="{{ item.status }}">{{item.status}}</ion-select-option>
+      </ion-select>
+    </button>
+    </div>
+  </ion-toolbar>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="label">
+            <ion-label ><b>Contact Details</b></ion-label>
+          </div>
+            <ion-list>
+              <p><b>Customer:</b>&nbsp;&nbsp;{{ jobData.customer }}</p>
+              <p><b>JobType:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{ jobData.jobtype }}</p>
+              <p><b>Phone:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;000-000-0000</p>
+              <p><b>Email:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email@site.com</p>
+            </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <div class="label">
+            <ion-label><b>Delivery Details</b></ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label id="address"><b>Pick-Up Address</b></ion-label>
+          <p (click)="gotoAddress()" id="addr"><ion-icon name="add"></ion-icon>Add Address1</p>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label id="address"><b>Delivery Address</b></ion-label>
+          <p (click)="gotoAddress()" id="addr"><ion-icon name="add"></ion-icon>Add Address2</p>
+        </ion-col>
+        <ion-col>
+          <p id="addr"><b>Instructions: </b>Ask security for john</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <div class="label">
+            <ion-label><b>Order Details</b></ion-label>
+          </div>
+          <ion-list>
+            <p>Food, more food, some more food</p>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <div class="label">
+            <ion-label><b>Payment</b></ion-label>
+          </div>
+          <ion-list>
+            <p>Unpaid, carry machine</p>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+    <ion-fab slot="fixed">
+      <button (click)="editJob()" color="#EB5614">
+        SAVE CHANGES &nbsp;
+      </button>
+    </ion-fab>
+  </ion-content>

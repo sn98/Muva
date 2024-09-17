@@ -1,0 +1,26 @@
+<div class="container" style="padding:0px !important;">
+  <div class=title>
+  </div>
+  <ion-grid style="padding-bottom: 15%;">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of couriers | filter:searchTerm">
+        <ion-card>
+          <ion-card-content (click)="showCourierDetails(item.id)">
+            <p><b>#{{ item.id }}</b></p>
+            <p><b>Courier:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>{{ item.name }} </p>
+            <p><b>Location:&nbsp;&nbsp;&nbsp; </b> {{ item.location }} </p>
+            <p><b>Status: &nbsp;</b><ion-badge [ngStyle]="{'background-color': getColor(item.status)}" slot="end">{{ item.status }}</ion-badge></p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab slot="fixed">
+    <button color="#EB5614" (click)="gotoAddNew()">
+      Add New &nbsp;
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</div>
+

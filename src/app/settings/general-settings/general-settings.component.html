@@ -1,0 +1,61 @@
+<div>
+  <ion-button color="light">
+  logo
+  </ion-button>
+  <p>status</p>
+  <ion-buttons>
+    <ion-toggle mode="ios" slot="start" name="Online" ></ion-toggle>
+    <ion-label><b>Open</b></ion-label>
+  </ion-buttons>
+</div>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-label><b>Company Name</b></ion-label>
+      <ion-input type="text" name="company_name" input-style="box" placeholder="Company name"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label><b>Opening Hours</b></ion-label><br>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="3">
+      <ion-input type="text" input-style="box" id="open" input-style="box" placeholder="00:00AM"></ion-input>
+    </ion-col>
+    <p><b>-</b></p>
+    <ion-col size="3">
+      <ion-input type="text" input-style="box" id="close" input-style="box" placeholder="00:00PM"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <ion-label><b>Phone</b></ion-label>
+      <ion-input type="text" input-style="box" id="phone" placeholder="876-754-3546"></ion-input>
+    </ion-col>
+    <ion-col size="7">
+      <ion-label><b>Email</b></ion-label>
+      <ion-input type="text" input-style="box" id="email" placeholder="johndoe@gamail.com"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label><b>Address</b></ion-label>
+      <ion-input type="text" name="address" input-style="box" placeholder="kingston, kingston"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label><b>Delivery Details</b></ion-label>
+      <ion-input type="text" name="del_details" input-style="box" placeholder="we deliver in kingston"></ion-input>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-fab slot="fixed">
+  <button color="#EB5614">
+    SAVE CHANGES &nbsp;
+  </button>
+</ion-fab>

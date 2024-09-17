@@ -1,0 +1,129 @@
+
+.muva{
+  position: absolute;
+  height: 25px;
+  width: 150px;
+  top: 24%;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  position: absolute;
+  align-items: center;
+  left:37%;
+  right: 35%;
+  top: 20%;
+}
+#seglabel{
+  font-size: x-small;
+}
+.edit{
+  position: absolute;
+  right:5%;
+  top:60px;
+  transform: scale();
+}
+ion-toolbar{
+  ion-title{
+    height:95px;
+  }
+  .back{
+    text-transform: none;
+    height: 19px;
+    color: gray;
+    width: 60px;
+    top:17%;
+    left: 5%;
+    position: absolute;
+    border-radius: 5px;
+  }
+  .badge {
+    position: absolute;
+    top: 53px;
+    right: 6%;
+    transform: scale(0.7);
+  }
+}
+ion-col{
+  line-height: 30px;
+}
+ion-button{
+  height: 20px;
+  width: 50px;
+  top:23%;
+  left: 5%;
+  position: absolute;
+  border-radius: 5px;
+  color: gray;
+  text-transform: none;
+}
+.payment{
+  font-size: small;
+  margin-left:-10px;
+}
+#courId{
+  position: absolute;
+  font-size: small;
+  top: 16%;
+  right: 5%;
+}
+ion-grid {
+  padding:5%;
+  padding-bottom: 25%;
+}
+.itempay{
+  background-color: transparent;
+}
+ion-badge {
+  position: absolute;
+  top: 15px;
+  right: 1%;
+  font-size: small;
+  width: 70px;
+  border-radius: 0;
+  height: 20px;
+}
+.name{
+  line-height:10px;
+}
+.l2{
+  font-size: small;
+}
+.in{
+  --ion-background-color:rgb(240, 240, 240);
+  border-radius: 5px;
+  height: 45px;
+}
+ion-input{
+  line-height: 10px;
+  height: 45px;
+  border-radius: 7px;
+  background-color: rgb(240, 240, 240);
+  color:black;
+}
+#address{
+  border-radius: 7px;
+  background-color: rgb(240, 240, 240);
+  color:black;
+}
+ion-fab{
+  position: fixed;
+  left:5%;
+  right:5%;
+  bottom: 5%;
+  width: 90%;
+
+  button{
+    height: 40px;
+    width: 100%;
+    background-color:#EB5614;
+    color:white;
+    border-radius: 10px;
+    ion-icon {
+      position: absolute;
+    }
+  }
+}

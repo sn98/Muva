@@ -1,0 +1,132 @@
+//TOOLBAR
+.line2{
+  display: flex;
+  padding-right: 5%;
+}
+
+ion-badge{
+  position: absolute;
+  bottom:5%
+}
+ion-toolbar{
+  ion-title{
+    height:105px;
+    #jobId{
+      position: absolute;
+      font-size: small;
+      top: 15px;
+      right: 5%;
+    }
+    .muva{
+      transform: scale(0.9);
+      position: absolute;
+      left: 33%;
+      right: 50%;
+      width: 150px;
+      top: 23%;
+    }
+    .back{
+      text-transform: none;
+      height: 19px;
+      color: gray;
+      width: 60px;
+      top:23%;
+      left: 5%;
+      position: absolute;
+      border-radius: 5px;
+    }
+  }
+  ion-select{
+    color: black;
+  }
+  .name{
+    position: absolute;
+    top: 70px;
+    left: 6%;
+    ion-select{
+      border-radius: 5px;
+      height: 15px;
+      background-color: rgb(240, 240, 240);
+      width: 150px;
+    }
+  }
+  .badge{
+    position: absolute;
+    top: 68px;
+    right:5%;
+    font-size: x-small;
+    height: 22px;
+    width: 90px;
+    color:white;
+    ion-select{
+      color:white;
+      margin-top:-10px;
+      margin-left:-20px;
+    }
+  }
+}
+#jobId{
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+ion-content{
+  padding-top: 20px;
+}
+
+ion-grid {
+  padding:5%;
+  padding-bottom: 25%;
+}
+ion-input{
+  border-radius: 7px;
+  background-color: rgb(240, 240, 240);
+  color:black;
+}
+ion-list{
+  margin-left:3%;
+  background-color: transparent;
+  line-height: 10px;
+  padding-left: 10px;
+  font-size: small;
+}
+
+.label{
+  background-color: rgb(235, 235, 235);
+  height: 30px;
+  padding-left: 2%;
+  border-radius: 5px;
+  line-height: 30px;
+}
+
+#address, #addr{
+  padding-left:5%;
+}
+#addr{
+  font-size: small;
+}
+.Location{
+  position: absolute;
+  top:360px;
+  left: 30px;
+}
+
+ion-fab{
+  position: fixed;
+  left:5%;
+  right:5%;
+  bottom: 5%;
+  width: 90%;
+
+  button{
+    height: 40px;
+    width: 100%;
+    background-color:#EB5614;
+    color:white;
+    border-radius: 10px;
+    ion-icon {
+      position: absolute;
+    }
+  }
+}

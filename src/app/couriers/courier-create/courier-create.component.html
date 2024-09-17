@@ -1,0 +1,59 @@
+<ion-toolbar>
+  <ion-title>
+    <ion-button class="back" fill="outline" color="gray" (click)="goback()">Cancel</ion-button>
+    <div class="img">
+    <img class="muva" src="assets/classy orange and white muva.png" >
+    </div>
+    <p id="courId">New Employee</p>
+    <button class="emp">
+      <b>Employee 0009</b>
+    </button>
+    <button class="badge" [ngStyle]="{'background-color': getColor(cstatus)}">
+      <ion-select [(ngModel)]="cstatus" interface="popover" >
+        <ion-select-option *ngFor="let item of statuses" value="{{ item.status }}">{{item.status}}</ion-select-option>
+      </ion-select>
+    </button>
+  </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <form #create="ngForm" (ngSubmit)="createCourier(create)">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label><b>Name</b></ion-label>
+          <ion-input ngModel required cname name="cname" placeholder="Dow Jones" type="text" input-style="box"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label><b>Phone</b></ion-label>
+          <ion-input ngModel required cphone name="cphone" placeholder="(876) 890-1543" type="text" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label><b>Email</b></ion-label>
+          <ion-input ngModel required cemail name="cemail" placeholder="email@email.com" type="text" input-style="box"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label><b>Password</b></ion-label>
+          <ion-input ngModel required cpassword name="cpassword"  type="password" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label><b>Merchant ID</b></ion-label>
+          <ion-input ngModel required mid name="mid" placeholder="111" type="number" input-style="box"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label><b>Location</b></ion-label>
+          <ion-input ngModel required location name="location"  type="text" input-style="box"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  <ion-fab slot="fixed">
+    <button [disabled]="!create.valid" type="submit" color="#EB5614">
+      SAVE CHANGES &nbsp;
+    </button>
+  </ion-fab>
+</form>
+</ion-content>

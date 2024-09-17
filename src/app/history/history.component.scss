@@ -1,0 +1,33 @@
+ion-content {
+  background-color: white;
+}
+img{
+  transform: scale(0.9);
+}#seglabel{
+  position: absolute;
+  font-size: x-small;
+  bottom: -5px;
+  font-weight: bold;
+  text-transform: none;
+}
+h4 {
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+.group {
+  position: absolute;
+  right: 5%;
+  padding-top: 10px;
+  background-color: transparent;
+}
+ion-segment{
+  justify-content: center;
+}
+ion-searchbar{
+  width: 60%;
+  position: absolute;
+  top:1px;
+  right: 10%;
+  transform:scale(0.68)
+
+}

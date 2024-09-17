@@ -1,0 +1,50 @@
+
+.title{
+  display: flex;
+  margin-bottom: -5px;
+}
+
+ion-card, ion-item{
+  background-color: whitesmoke;
+  box-shadow: none !important;
+  ion-badge {
+    position: absolute;
+    top: 63px;
+    font-size: x-small;
+    width: 60px;
+    border-radius: 0;
+    height: 15px;
+  }
+  p{
+    font-size: x-small;
+  }
+}
+
+h6 {
+  margin-bottom: 5px;
+}
+
+br{
+  line-height: 1px;
+}
+
+ion-grid{
+  padding-bottom: 25%;
+}
+ion-fab{
+  position: fixed;
+  bottom: 40px;
+  right: 5%;
+
+  button{
+    height: 30px;
+    width: 93px;
+    background-color:#EB5614;
+    color:white;
+    border-radius: 5px;
+    ion-icon {
+      position: absolute;
+    }
+  }
+}
+

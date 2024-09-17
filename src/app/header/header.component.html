@@ -1,0 +1,12 @@
+<div class="head">
+  <br>
+    <img src="assets/classy orange and white muva.png" >
+  <div class="search">
+    <button id="all" (click)="allPopover($event)">All</button>
+    <ion-input [(ngModel)]="filterTerm" (ionChange)="searching($event)" no-padding placeholder="Customers, Couriers, Jobs, Job Type"></ion-input>
+    <button id="go">Go</button>
+  </div>
+
+  <ion-icon slot="end" name="ellipsis-vertical-outline" (click)="presentPopover($event)"></ion-icon>
+</div>
+

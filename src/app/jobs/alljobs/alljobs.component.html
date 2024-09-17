@@ -1,0 +1,28 @@
+<div class="container" style="padding:0px !important;">
+  <ion-grid style="padding-bottom: 15%;">
+    <ion-row no-padding>
+      <ion-col size="12" *ngFor="let item of jobs | filter:searchTerm">
+        <ion-card  (click)="showJobDetails(item)">
+          <ion-card-content>
+            <p><b>#{{ item.jobid }}</b></p>
+            <p id="time"> 00:00AM</p>
+            <p><b>Customer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>{{ item.customer }} </p>
+            <p><b>Job Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>{{ item.jobtype }} </p>
+            <ion-badge [ngStyle]="{'background-color': getColor(item.status)}" slot="end">{{ item.status }}</ion-badge>
+            <p><b>Instructions: &nbsp;</b>{{ item.instructions }}</p>
+            <p id="courier">{{ item.courier }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-fab slot="fixed">
+    <button color="#EB5614" (click)="gotoAddNew()">
+      Add New &nbsp;
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</div>
+

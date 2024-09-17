@@ -1,0 +1,7 @@
+{
+  "name": "raw",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

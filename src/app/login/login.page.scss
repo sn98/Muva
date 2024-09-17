@@ -1,0 +1,42 @@
+ion-content.background{
+  --background: url(../../assets/login.png) 0 0/100% 100% no-repeat;
+  border: none;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 50%;
+  ion-img{
+    transform: scale(0.7);
+  }
+}
+ion-item{
+  background-color: red;
+  border-radius: 5px;
+}
+.item-background-color{
+  --ion-item-background:#015f01d5;
+}
+
+#invalid{
+  color: red;
+  text-align: center;
+  font-size: small;
+}
+.forgot{
+  color: #56CDDB;
+  text-align: right;
+  font-size: small;
+}
+button{
+  background-color: #EB5614;
+  width:100%;
+  height: 50px;
+  border-radius: 5px;
+  color:white;
+}

@@ -1,0 +1,27 @@
+
+.muva{
+  padding-top: 5px;
+  height: 30px;
+  width: 150px;
+}
+
+.back{
+  height: 20px;
+  width: 60px;
+  top: 11%;
+  text-transform: none;
+  color:gray;
+  left: 5%;
+  position: absolute;
+  border-radius: 5px;
+}
+#set{
+  position: absolute;
+  right: 5%;
+  top: 10px
+
+}
+.img{
+  display: flex;
+  justify-content: center;
+}

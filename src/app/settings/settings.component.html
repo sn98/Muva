@@ -1,0 +1,16 @@
+<ion-header style="background-color:white">
+  <app-settingsheader></app-settingsheader>
+  <ion-toolbar>
+    <ion-segment color="danger" scrollable="true" style="background-color: white;">
+      <ion-segment-button  *ngFor="let name of segmentTabs"
+        (click)="segmentChosen(name)">
+        <ion-label id="seglabel"> {{ name }} </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content overflow-scroll="true">
+  <app-general-settings *ngIf="selectedSegment === 'General Settings'"></app-general-settings>
+  <app-jobs-settings *ngIf="selectedSegment === 'Job Settings'"></app-jobs-settings>
+</ion-content>

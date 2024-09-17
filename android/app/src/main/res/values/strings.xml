@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Muva</string>
+    <string name="title_activity_main">Muva</string>
+    <string name="package_name">com.muva.app</string>
+    <string name="custom_url_scheme">com.muva.app</string>
+</resources>

@@ -1,0 +1,45 @@
+.head{
+  background-color: #FFFFFF;
+  display: flex;
+  padding-top: 15px;
+}
+.search{
+  display: flex;
+  padding-left: 3%;
+  height: 17px;
+  width: 62%;
+}
+
+img{
+  height: 17px;
+  width: 110px;
+  padding-left: 15px;
+}
+#seglabel{
+  font-size: x-small;
+}
+
+ion-icon {
+  position: absolute;
+  right: 3%;
+  transform: scale(1.2);
+}
+ion-input{
+  background-color: #F8F8F8;
+  padding:0px;
+  font-size: x-small;
+}
+.sc-ion-searchbar-md-h {
+  --box-shadow: none !important
+}
+#go{
+  width: 13%;
+  font-size: x-small;
+  color:white;
+  background-color: #EB5614;
+}
+#all{
+  width: 13%;
+  font-size: x-small;
+  background-color: #DBDBDB;
+}

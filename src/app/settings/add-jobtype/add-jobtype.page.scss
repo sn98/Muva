@@ -1,0 +1,76 @@
+//TOOLBAR
+h4{
+  margin-top: 1px;
+  padding-left: 20px;
+  margin-bottom: -5px;
+}
+.muva{
+  padding-top: 5px;
+  height: 30px;
+  width: 150px;
+}
+
+.back{
+  height: 20px;
+  width: 60px;
+  top: 13%;
+  text-transform: none;
+  color:gray;
+  left: 5%;
+  position: absolute;
+  border-radius: 5px;
+}
+#set{
+  position: absolute;
+  right: 5%;
+  top: 15px
+
+}
+.img{
+  display: flex;
+  justify-content: center;
+}
+
+
+#size{
+  width:80px;
+}
+
+ion-card::part(native){
+  box-shadow: none;
+}
+
+ion-card{
+  box-shadow: none !important;
+  background-color: #F8F8F8;
+  button{
+    background-color:#56CCDB;
+    color: white;
+    position: absolute;
+    top:25%;
+    right:5%;
+    height: 50%;
+    border-radius: 5px;
+  }
+}
+
+ion-toolbar{
+  height: 75px;
+}
+
+ion-fab{
+  position: fixed;
+  bottom: 40px;
+  right: 5%;
+
+  button{
+    height: 30px;
+    width: 93px;
+    background-color:#EB5614;
+    color:white;
+    border-radius: 5px;
+    ion-icon {
+      position: absolute;
+    }
+  }
+}
